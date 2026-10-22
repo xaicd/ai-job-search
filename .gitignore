@@ -1,7 +1,7 @@
 # Dependencies
 node_modules
 bun.lock
-
+docs
 # Python
 __pycache__/
 *.pyc
@@ -21,6 +21,15 @@ build/
 
 # Personal data (never commit these)
 salary_data.json
+# The candidate profile itself. /setup writes the real name, address, phone,
+# email, LinkedIn, employment history and salary expectations into these three
+# files, and this repository is public - so they are untracked here, not
+# ignored-after-the-fact. The pristine placeholder versions live on the
+# `master` branch (the upstream mirror); see FORK-NOTES.md for how to restore
+# them into a fresh clone.
+CLAUDE.md
+.claude/skills/job-application-assistant/01-candidate-profile.md
+.claude/skills/job-application-assistant/02-behavioral-profile.md
 # Match at any depth: the job-scraper skill resolves `job_scraper/` relative to
 # its own directory, so these land at .claude/skills/job-scraper/job_scraper/*.
 # A rooted `job_scraper/...` pattern silently fails to match them.
